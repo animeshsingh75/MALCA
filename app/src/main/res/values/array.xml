@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="skillsTab">
+        <item>None</item>
+        <item>C++</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>ML &amp; AI</item>
+        <item>App Dev</item>
+        <item>Web Dev</item>
+    </string-array>
+
+    <string-array name="companyTab">
+        <item>None</item>
+        <item>Meta</item>
+        <item>Amazon</item>
+        <item>Apple</item>
+        <item>Netflix</item>
+        <item>Google</item>
+        <item>Microsoft</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="locationTab">
+        <item>None</item>
+        <item>India</item>
+        <item>USA</item>
+        <item>Other</item>
+    </string-array>
+</resources>

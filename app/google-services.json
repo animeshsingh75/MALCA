@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1070053358863",
+    "firebase_url": "https://malca-5f4a9-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "malca-5f4a9",
+    "storage_bucket": "malca-5f4a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070053358863:android:0a84d735667e633fab527a",
+        "android_client_info": {
+          "package_name": "com.project.malca"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070053358863-jm64j0eb8sputfquj9tukqmqt40gig9n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFBZaeIPCFMIxVcEnKnGude2XZfjZVolk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070053358863-jm64j0eb8sputfquj9tukqmqt40gig9n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
