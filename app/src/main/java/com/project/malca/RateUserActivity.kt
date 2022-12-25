@@ -202,7 +202,8 @@ class RateUserActivity : AppCompatActivity() {
             skills = currentUser.skills,
             currentUser.rollNo,
             currentUser.company,
-            currentUser.country
+            currentUser.country,
+            currentUser.alumni
         )
         database.collection("users").document(friendId!!).set(user)
             .addOnSuccessListener {

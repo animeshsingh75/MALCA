@@ -1,12 +1,214 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".UserDetailsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:background="?attr/colorPrimary"
+        android:elevation="10dp"
+        android:gravity="center"
+        android:id="@+id/toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:theme="@style/AppTheme.Toolbar"
+        app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light">
+
+        <FrameLayout
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/closeBtn"
+                android:layout_height="40dp"
+                android:layout_width="20dp"
+                android:src="@drawable/ic_arrow_back_black_24dp" />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Profile Info"
+                android:textSize="24sp" />
+
+        </FrameLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/userImgView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
+        android:src="@drawable/defaultavatar"
+        app:shapeAppearanceOverlay="@style/RoundedImageView" />
+
+    <RelativeLayout
+        android:id="@+id/alumni"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/creator_layout"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/alumniTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Alumni"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/nameTv"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="Name: Animesh"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/locationTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="Location: India"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/companyTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="Company: Apple"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/yopTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:text="Year of passing: 2019"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/star_layout"
+        android:padding="10dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/starImage"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_star_rated" />
+
+        <TextView
+            android:id="@+id/ratingTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/starImage"
+            android:text="4.4"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_toEndOf="@+id/ratingTv"
+            android:text="/5.0"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/skillsContainer"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp">
+
+        <RelativeLayout
+            android:id="@+id/skillLayout1"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:background="@drawable/star_layout"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/skillTv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Dev"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/skillLayout2"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/star_layout"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/skillTv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ML &amp; AI"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/skillLayout3"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/star_layout"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/skillTv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Dev"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -2,7 +2,6 @@ package com.project.malca.auth
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -38,7 +37,7 @@ class MoreDetailsActivity : AppCompatActivity() {
         binding.radioGroup.setOnCheckedChangeListener { _, checkedIn ->
             binding.submitBtn.isEnabled = true
             when (checkedIn) {
-                R.id.alumniRB-> {
+                R.id.alumniRB -> {
                     binding.alumni.visibility = View.VISIBLE
                     binding.student.visibility = View.GONE
                 }
@@ -56,6 +55,7 @@ class MoreDetailsActivity : AppCompatActivity() {
                     user.company = binding.companyEdTv.text.toString()
                     user.rollNo = binding.rollNoEdTv.text.toString()
                     user.country = binding.countryEdTv.text.toString()
+                    user.alumni = true
                     database.collection("users").document(auth.uid!!).set(user)
                         .addOnSuccessListener {
 
@@ -71,6 +71,7 @@ class MoreDetailsActivity : AppCompatActivity() {
                     user.company = null
                     user.rollNo = binding.userImgView.text.toString()
                     user.country = null
+                    user.alumni = false
                     database.collection("users").document(auth.uid!!).set(user)
                         .addOnSuccessListener {
 

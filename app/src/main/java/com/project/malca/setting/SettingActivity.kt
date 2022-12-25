@@ -193,7 +193,8 @@ class SettingActivity : AppCompatActivity() {
                                                 currentUser.skills,
                                                 currentUser.rollNo,
                                                 currentUser.company,
-                                                currentUser.rollNo
+                                                currentUser.rollNo,
+                                                currentUser.alumni
                                             )
                                             database.collection("users").document(mCurrentUid)
                                                 .set(currentUser)

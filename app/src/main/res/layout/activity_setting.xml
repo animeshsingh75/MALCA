@@ -72,6 +72,7 @@
         <LinearLayout
             android:layout_marginStart="10dp"
             android:id="@+id/rateApp"
+            android:visibility="gone"
             android:layout_marginTop="25dp"
             android:layout_below="@+id/account"
             android:layout_width="match_parent"

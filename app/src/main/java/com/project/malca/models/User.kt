@@ -14,9 +14,10 @@ data class User(
     val skills: List<String>,
     var rollNo: String,
     var company: String? = null,
-    var country: String? = null
+    var country: String? = null,
+    var alumni: Boolean = false
 ) : java.io.Serializable {
-    constructor() : this("", "", "", "", "", "", "", "", false, 0F, listOf(),"",null,null)
+    constructor() : this("", "", "", "", "", "", "", "", false, 0F, listOf(), "", null, null, false)
     constructor(
         name: String,
         upper_name: String = name.toUpperCase(),
@@ -28,7 +29,8 @@ data class User(
         skills: List<String>,
         rollNo: String,
         company: String?,
-        country: String?
+        country: String?,
+        alumni: Boolean,
     ) : this(
         name,
         upper_name,
@@ -42,6 +44,7 @@ data class User(
         skills = skills,
         rollNo = rollNo,
         company = company,
-        country = country
+        country = country,
+        alumni = alumni
     )
 }

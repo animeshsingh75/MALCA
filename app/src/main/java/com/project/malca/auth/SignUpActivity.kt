@@ -160,7 +160,8 @@ class SignUpActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
                             skills = skillsMap,
                             rollNo = "",
                             company = null,
-                            country = null
+                            country = null,
+                            alumni = false
                         )
                         val prefs = getSharedPreferences("FileName", MODE_PRIVATE)
                         with (prefs.edit()) {

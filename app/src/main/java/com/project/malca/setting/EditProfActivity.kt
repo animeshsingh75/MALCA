@@ -152,7 +152,8 @@ class EditProfActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
                 skillsMap,
                 currentUser.rollNo,
                 currentUser.company,
-                currentUser.country
+                currentUser.country,
+                currentUser.alumni
             )
             database.collection("users").document(mCurrentUid).set(currentUser)
                 .addOnSuccessListener {
@@ -329,7 +330,8 @@ class EditProfActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener
                                             currentUser.skills,
                                             currentUser.rollNo,
                                             currentUser.company,
-                                            currentUser.rollNo
+                                            currentUser.rollNo,
+                                            currentUser.alumni
                                         )
                                         database.collection("users").document(mCurrentUid)
                                             .set(currentUser)
