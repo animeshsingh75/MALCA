@@ -182,6 +182,9 @@ class PeopleFragment : Fragment() {
 
             }
         }
+        popupWindow.setOnDismissListener {
+            tabSelected = ""
+        }
         closeBtn.setOnClickListener {
             initialAdapter()
             popupWindow.dismiss()
@@ -285,12 +288,12 @@ class PeopleFragment : Fragment() {
                 return when (viewType) {
                     NORMAL_VIEW_TYPE -> UserViewHolder(
                         layoutInflater.inflate(
-                            com.project.malca.R.layout.list_item_people, parent, false
+                            R.layout.list_item_people, parent, false
                         )
                     )
                     else -> EmptyViewHolder(
                         layoutInflater.inflate(
-                            com.project.malca.R.layout.empty_view, parent, false
+                            R.layout.empty_view, parent, false
                         )
                     )
                 }

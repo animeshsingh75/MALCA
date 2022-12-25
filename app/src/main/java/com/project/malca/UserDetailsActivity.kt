@@ -51,7 +51,7 @@ class UserDetailsActivity : AppCompatActivity() {
                         yopTv.text = "Year in: ${formatYear(calculateYear(yop))}"
                     }
                     nameTv.text = "Name: ${user.name}"
-                    ratingTv.text = user.rating.toString()
+                    ratingTv.text = "Rating: ${user.rating}"
                     val size = user.skills.size
                     if (size >= 1) {
                         binding.skillLayout2.isVisible = true
