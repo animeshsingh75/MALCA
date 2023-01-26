@@ -40,7 +40,7 @@ class UserDetailsActivity : AppCompatActivity() {
                 binding.apply {
                     if (user.alumni) {
                         locationTv.text = "Location: ${user.country}"
-                        companyTv.text = "Company: ${user.country}"
+                        companyTv.text = "Company: ${user.company}"
                         val yearop = user.rollNo.subSequence(9, 11).toString().toInt() + 4
                         yopTv.text = "Year passed out: 20$yearop"
                     } else {

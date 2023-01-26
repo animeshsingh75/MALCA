@@ -53,6 +53,7 @@ class InboxFragment : Fragment() {
 
         val baseQuery: Query =
             mDatabase.reference.child("chats").child(auth.uid!!).orderByChild("invertedDate")
+                .startAt(1.0)
 
         val options = FirebaseRecyclerOptions.Builder<Inbox>()
             .setLifecycleOwner(viewLifecycleOwner)
@@ -69,7 +70,6 @@ class InboxFragment : Fragment() {
                 inbox: Inbox
             ) {
                 viewHolder.bind(inbox) { name: String, photo: String, id: String ->
-                    Log.d("Image", "Item Image:$photo")
                     startActivity(
                         ChatActivity.createChatActivity(
                             requireContext(),
@@ -107,7 +107,7 @@ class InboxFragment : Fragment() {
     fun initialQuery() {
 
         val baseQuery: Query =
-            mDatabase.reference.child("chats").child(auth.uid!!)
+            mDatabase.reference.child("chats").child(auth.uid!!).orderByChild("count").startAt(0.0)
         val options = FirebaseRecyclerOptions.Builder<Inbox>()
             .setQuery(baseQuery, Inbox::class.java)
             .build()
