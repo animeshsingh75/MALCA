@@ -107,7 +107,8 @@ class InboxFragment : Fragment() {
     fun initialQuery() {
 
         val baseQuery: Query =
-            mDatabase.reference.child("chats").child(auth.uid!!).orderByChild("count").startAt(0.0)
+            mDatabase.reference.child("chats").child(auth.uid!!).orderByChild("invertedDate")
+                .startAt(1.0)
         val options = FirebaseRecyclerOptions.Builder<Inbox>()
             .setQuery(baseQuery, Inbox::class.java)
             .build()
@@ -122,13 +123,14 @@ class InboxFragment : Fragment() {
             layoutManager = viewManager
             adapter = mAdapterInbox
         }
-        val searchViewModel = ViewModelProvider(requireActivity()).get(SearchViewModel::class.java)
-        searchViewModel.getQuery()!!.observe(viewLifecycleOwner,
-            { t ->
-                if (t != null) {
-                    changeQuery(t)
-                }
-            })
+        val searchViewModel = ViewModelProvider(requireActivity())[SearchViewModel::class.java]
+        searchViewModel.getQuery()!!.observe(
+            viewLifecycleOwner
+        ) { t ->
+            if (t != null) {
+                changeQuery(t)
+            }
+        }
     }
 
 }
